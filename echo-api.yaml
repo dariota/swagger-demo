@@ -1,0 +1,59 @@
+---
+swagger: '2.0'
+info:
+  title: Demo Service
+  description: Demo Service for swagger
+  version: "1.0.0"
+  contact:
+    name: API Support
+    email: dario@example.com
+host: "localhost:8080"
+schemes:
+  - http
+produces:
+  - application/json
+consumes:
+  - application/json
+paths:
+  /:
+    get:
+      summary: Echoes back input
+      operationId: WhatDidISay
+      tags:
+        - EchoServer
+      description: |
+        Simply echoes back whatever the client passes in. Hopefully can be deployed without even needing a server. 
+      parameters:
+        - name: iSaid
+          in: query
+          required: true
+          type: string
+          description: What the client has said, to be said back to it.
+      responses:
+        200:
+          description: Whatever the client said.
+          schema:
+            $ref: '#/definitions/ClientSaid'
+          headers:
+            Content-Type:
+              type: string
+              description: Always application/json.
+        415:
+          description: The content-type passed in couldn't be understood.
+          schema:
+            $ref: '#/definitions/BasicResponse'
+          headers:
+            Content-Type:
+              type: string
+              description: Always application/json.
+definitions:
+  BasicResponse:
+    type: object
+    description: A basic response has no content and as such is just an empty JSON object. Inspect the HTTP status code to determine the result.
+  ClientSaid:
+    type: object
+    description: Whatever the client just said. Have you really not gotten that by now?
+    properties:
+      clientSaid:
+        type: string
+        description: Guess!
