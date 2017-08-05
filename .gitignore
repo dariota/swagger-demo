@@ -1,3 +1,9 @@
+# Swagger ignore files
 client/.swagger*
 docs/.swagger*
 server/.swagger*
+
+# Scalatra/sbt generated binaries
+server/generated/target/
+server/generated/project/target
+server/generated/project/project
