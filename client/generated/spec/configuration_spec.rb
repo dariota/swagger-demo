@@ -18,7 +18,7 @@ describe SwaggerClient::Configuration do
   before(:each) do
     # uncomment below to setup host and base_path
     #require 'URI'
-    #uri = URI.parse("http://localhost:8080/")
+    #uri = URI.parse("http://localhost:8080/EchoServer")
     #SwaggerClient.configure do |c|
     #  c.host = uri.host
     #  c.base_path = uri.path
@@ -28,14 +28,14 @@ describe SwaggerClient::Configuration do
   describe '#base_url' do
     it 'should have the default value' do
       # uncomment below to test default value of the base path
-      #expect(config.base_url).to eq("http://localhost:8080")
+      #expect(config.base_url).to eq("http://localhost:8080/EchoServer")
     end
 
     it 'should remove trailing slashes' do
       [nil, '', '/', '//'].each do |base_path|
         config.base_path = base_path
         # uncomment below to test trailing slashes
-        #expect(config.base_url).to eq("http://localhost:8080")
+        #expect(config.base_url).to eq("http://localhost:8080/EchoServer")
       end
     end
   end

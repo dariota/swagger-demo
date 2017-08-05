@@ -130,7 +130,7 @@ module SwaggerClient
     def initialize
       @scheme = 'http'
       @host = 'localhost:8080'
-      @base_path = ''
+      @base_path = 'EchoServer'
       @api_key = {}
       @api_key_prefix = {}
       @timeout = 0
