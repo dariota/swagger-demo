@@ -1,0 +1,3 @@
+client/.swagger*
+docs/.swagger*
+server/.swagger*
