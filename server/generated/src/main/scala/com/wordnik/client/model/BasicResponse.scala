@@ -10,9 +10,6 @@
  * Do not edit the class manually.
  */
 
-
 package com.wordnik.client.model
 
-
-case class BasicResponse (
-)
+case class BasicResponse()

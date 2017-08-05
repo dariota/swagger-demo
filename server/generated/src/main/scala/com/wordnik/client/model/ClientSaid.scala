@@ -10,11 +10,8 @@
  * Do not edit the class manually.
  */
 
-
 package com.wordnik.client.model
 
-
-case class ClientSaid (
+case class ClientSaid(
   /* Guess! */
-  clientSaid: Option[String]
-)
+  clientSaid: Option[String])
