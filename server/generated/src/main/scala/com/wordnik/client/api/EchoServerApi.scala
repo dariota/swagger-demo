@@ -49,7 +49,7 @@ class EchoServerApi(implicit val swagger: Swagger) extends ScalatraServlet
 
     val iSaid = params.getAs[String]("iSaid")
 
-    println("iSaid: " + iSaid)
+    new ClientSaid(iSaid)
   }
 
 }
