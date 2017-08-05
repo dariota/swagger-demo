@@ -46,6 +46,21 @@ paths:
             Content-Type:
               type: string
               description: Always application/json.
+      x-amazon-apigateway-integration:
+        responses:
+          default:
+            statusCode: 200
+            responseParameters:
+              method.response.header.Content-Type: "'application/json'"
+            responseTemplates:
+              application/json: >
+                {
+                  "clientSaid": "$util.escapeJavaScript($input.params('iSaid'))"
+                }
+        requestTemplates:
+          application/json: "{\"statusCode\":200}"
+        passthroughBehavior: "when_no_templates"
+        type: "mock"
 definitions:
   BasicResponse:
     type: object
