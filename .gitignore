@@ -3,6 +3,9 @@ client/.swagger*
 docs/.swagger*
 server/.swagger*
 
+# gem/bundler generated files
+client/Gemfile.lock
+
 # Scalatra/sbt generated binaries
 server/generated/target/
 server/generated/project/target
