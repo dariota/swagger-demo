@@ -1,1 +1,2 @@
 gem 'swagger_client', '~> 1.0.0'
+gem 'echo_api_remote', '~> 1.0.0'
